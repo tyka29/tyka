@@ -1,0 +1,65 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin-top: 10rem;
+    background-color: #f1f1f1;
+    border-radius: 2rem;
+  }
+  
+  .card {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(0%, -50%);
+    width: 322px;
+    height: 200px;
+    z-index: 1;
+    animation: slide 10s infinite;
+  }
+  
+  .card img {
+    width: 322px;
+    height: 201px;
+  }
+  
+  .phone {
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    width: 600px;
+    z-index: 2;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 2s ease;
+  }
+  
+  .contact-img {
+    width: 800px;
+    height: 550px;
+    flex-shrink: 0;
+  }
+  
+  .active {
+    transform: translateX(0px);
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translate(-50%, -50%);
+    }
+    50% {
+      transform: translate(-50%, -50%) translateX(200px);
+    }
+    100% {
+      transform: translate(-50%, -50%) translatex(-100px);
+    }
+  }
+  
