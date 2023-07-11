@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style2.css">
+    <script src="https://kit.fontawesome.com/ca7dc39334.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/style2.css">
+        <link rel="stylesheet" href="style/phone.css">
 
-    <!-- Google tag (gtag.js) -->
+    <title>Tyka web design</title>
+
+        <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZ6W1MP7XR"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -15,104 +19,107 @@
   gtag('js', new Date());
 
   gtag('config', 'G-DZ6W1MP7XR');
-</script>
-    
-    <title>Tyka web design</title>
+  </script>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="index.html"><img src="img/logo.png" alt="logo de la société Tyka"></a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#project">Mes projets</a></li>
-                <li><a href="#contact">Contactez-moi</a></li>
-                <li><a href="#propos">À propos</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.png" alt=""></a>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="contact.html">Me contacter</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+</header>
+  
+  
 
-        <form class="title" action="title">
-            <div class="searchBar">
-                <h1>Développeur Front-end</h1>
-                <p>vous offre mes services pour la création de sites web modernes adapté à vos besoins spécifiques. <br/>Mais aussi des supports de communications </p>
-            </div>
-          </form>
-            <form action="#" id="form">
-              <input class="search-box" type="search" name="search" placeholder="Écrivez-votre message" id="input-search" >
-              <button class="btn-search" aria-label="Rechercher">
-                  <span>Contactez-nous</span>
-                  <i class="fa-solid fa-messages-question"></i> 
-              </button>
+    <main>
+        <form action="#" id="form">
+            <input class="search-box" type="search" name="search" placeholder="Contactez-moi" id="input-search">
+            <button class="btn-search" id="contact-button" aria-label="Envoyer">
+              <span>Envoyer</span>
+              <i class="fa-solid fa-message"></i>
+            </button>
         </form>
 
-        <section class="head" id="project">
-            <article>
-                <h2>Article à la une : <span><strong>Carte de visite</strong></span></h2>
-                <img src="img/recto.png" alt="Image du produit phare du coté recto">
-                <img src="img/verso.png" alt="à présent le même produit phare mais du coté verso">
-                <p><strong>TY'Card</strong> - La carte de visite sans contact avec son qr code</p>
-                <a href="cdv.html">En savoir plus</a>
-            </article>
+        <section class="all_thumbnails" id="project">
+            <div class="thumbnails"></div>
         </section>
 
-        <section class="thumbnails">
-            <h2>Mes Projets</h2>
-            <div class="thumbnails">
-                <div class="project-thumbnail">
-                    <img src="chemin_vers_image.jpg" alt="Nom du projet">
-                    <h3>Nom du projet 1</h3>
-                    <p>Description du projet 1</p>
-                    <a href="lien_vers_projet1.html">En savoir plus</a>
-                </div>
-                
-                <div class="project-thumbnail">
-                    <img src="chemin_vers_image.jpg" alt="Nom du projet">
-                    <h3>Nom du projet 2</h3>
-                    <p>Description du projet 2</p>
-                    <a href="lien_vers_projet2.html">En savoir plus</a>
-                </div>
-
-                <div class="project-thumbnail">
-                    <img src="chemin_vers_image.jpg" alt="Nom du projet">
-                    <h3>Nom du projet 2</h3>
-                    <p>Description du projet 2</p>
-                    <a href="lien_vers_projet2.html">En savoir plus</a>
-                </div>
-
-                <div class="project-thumbnail">
-                    <img src="chemin_vers_image.jpg" alt="Nom du projet">
-                    <h3>Nom du projet 2</h3>
-                    <p>Description du projet 2</p>
-                    <a href="lien_vers_projet2.html">En savoir plus</a>
-                </div>
-
-                <div class="project-thumbnail">
-                    <img src="chemin_vers_image.jpg" alt="Nom du projet">
-                    <h3>Nom du projet 2</h3>
-                    <p>Description du projet 2</p>
-                    <a href="lien_vers_projet2.html">En savoir plus</a>
-                </div>
-
-                <div class="project-thumbnail">
-                    <img src="chemin_vers_image.jpg" alt="Nom du projet">
-                    <h3>Nom du projet 2</h3>
-                    <p>Description du projet 2</p>
-                    <a href="lien_vers_projet2.html">En savoir plus</a>
-                </div>
-                
-                <!-- Ajoutez d'autres miniatures de projets selon vos besoins -->
+        <section id="contact">
+            <h3>Donner une dimension visuelle à votre entreprise</h3>
+            <p>Chaque projet est différent et a besoin d'une étude personnalisée. Je propose des devis sur mesure en fonction de vos besoins.</p>
+            <p>Pour un devis de site internet : merci de préciser la liste des pages, les fonctionnalités, si vous avez des préférences en style de design, etc.</p>
+            <p>Pour vos projets d'impression (plaquette, catalogue, flyer...) : merci d'indiquer le format et le nombre de pages envisagées.</p>
+            <div class="form-container">
+              <form action="https://formspree.io/xbjebgka" method="POST">
+                <label for="email">Adresse e-mail</label>
+                <input id="email" type="email" name="email" required>
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+                <button class="custom-button" type="submit">Envoyer</button>
+              </form>
             </div>
-        </section>
-        
-
+          </section>
+          
+          <div class="container">
+            <div class="card">
+              <img src="img/face1.png" alt="">
+            </div>
+            <div class="phone">
+              <div class="carousel">
+                <img src="img/contact1.png" alt="" class="contact1-img contact-img hidden">
+                <img src="img/contact.png" alt="" class="contact-img">
+              </div>
+            </div>
+          </div>
+          
+          
+          
+          
+          
+          
+          
+          
     </main>
 
-    
+    <footer class="footer">
+            <div class="links">
+                <ul>
+                    <li><a href="project.html">Mes projets</a></li>
+                    <li><a href="contact.html">Contactez-moi</a></li>
+                
+                  <li>
+                    <a href="https://facebook.com/tykadesign">
+                      <i class="fa-brands fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/mikl291">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </li>
+                </ul>
+                <p class="text-center">
+                  &copy; TYKA
+                  <script>
+                      document.write(new Date().getFullYear());
+                  </script>
+                  - Tous droits réservés.
+              </p>
+                </ul>
+            </div>
+    </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" ></script>
+    <script src="js/mail.js" defer></script>
 </body>
 </html>
