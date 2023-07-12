@@ -1,0 +1,55 @@
+.card {
+    text-align: center;
+  }
+  
+  .card h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card-title {
+    width: 250px;
+    margin: 20px;
+    padding: 20px;;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .card-title:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title img {
+    width: 322px;
+    margin-bottom: 10px;
+  }
+  
+  .card-title h5 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .card-title p {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .card-title a {
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  .card-title a:hover {
+    text-decoration: underline;
+  }
+  
