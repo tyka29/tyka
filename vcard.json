@@ -1,20 +1,12 @@
 [
     {
         "id": 1,
-        "image": "img/cdv_isaac2.png",
-        "alt": "Image du d'une carte de visite sans contact pour isaac ahamada photographe",
-        "title": "Isaac photographe",
-        "description": "Carte de visite", 
-        "description2": "NFC & QR code"
+        "image": "img/cdv_isaac2.png"
     },
     
     {
         "id": 2,
-        "image": "img/cdv3.png",
-        "alt": "Image du d'une carte de visite sans contact pour SOS Pelle Service",
-        "title": "SOS Pelle Service",
-        "description": "Carte de visite", 
-        "description2": "NFC & QR code"
+        "image": "img/cdv3.png"
     }
 
 ]
