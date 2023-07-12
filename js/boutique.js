@@ -23,4 +23,4 @@ fetch('vcard.json')
     console.error('Erreur lors du chargement des données vcard.json :', error);
   });
 
-  const sendEmail = require('./sendEmail');
+  const sendEmail = require('../back/sendEmail');
