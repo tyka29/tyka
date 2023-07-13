@@ -1,3 +1,16 @@
+h1, h2, h3 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 22px;
+  color: #007bff;
+  margin-block: 1rem;
+}
+
+p {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 1rem;
+}
 .avantage .carousel {
   margin-top: 20px;
 }
@@ -22,10 +35,4 @@
 
 .avantage .carousel img:hover {
   transform: scale(1.1);
-}
-h1, h2, h3 {
-  text-transform: uppercase;
-  text-decoration: underline;
-  font-size: 18px;
-  color: white;
 }
