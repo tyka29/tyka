@@ -37,8 +37,7 @@
         
             <div class="content">
                 <form id="vcardForm">
-                  <h3>Génerateur de QR code pour vcard</h3>
-                  <p>(Seul l'adresse mail est obligatoire)</p>
+                  <h3>Génerateur de QR code pour vcard <span>(Seul l'adresse mail est obligatoire)</span></h3>
                     <div class="form-group">
                         <label for="firstName">First Name:</label>
                         <input type="text" id="firstName" name="firstName" required>
@@ -156,6 +155,7 @@
     </footer>
 
     <script src="js/boutique.js" defer></script>
+    <script src="js/qrcode.js" defer></script>
     <script>
       function sendEmail() {
         // Capturer les données du formulaire
