@@ -108,6 +108,7 @@
                 <button type="submit" class="button__generate" id="generateQR">GENERATE</button>
                 <button type="button" class="button__clear" id="clearForm">CLEAR</button>
                 <button type="button" id="sendEmailButton" class="button__download">SEND</button>
+
               </form>
               <div class="qr" id="qr"></div>
             </div>
@@ -145,12 +146,12 @@
     <script src="js/boutique.js" defer></script>
     <script src="js/qrcode.js" defer></script>
     <script>
-      // Récupérer le bouton de téléchargement et ajouter un gestionnaire d'événement de clic
-      const downloadButton = document.getElementById('downloadButton');
-      downloadButton.addEventListener('click', () => {
+      // Récupérer le bouton d'envoi d'e-mail et ajouter un gestionnaire d'événement de clic
+      const sendEmailButton = document.getElementById('sendEmailButton');
+      sendEmailButton.addEventListener('click', () => {
         // Récupérer les données du formulaire
         const formData = new FormData(document.getElementById('vcardForm'));
-
+    
         // Effectuer une requête POST au serveur pour envoyer l'e-mail
         fetch('/envoyer-email', {
           method: 'POST',
@@ -159,14 +160,23 @@
           .then(response => {
             if (response.ok) {
               console.log('E-mail envoyé avec succès');
+              // Afficher un message de succès
+              document.getElementById('statusMessage').textContent = 'E-mail envoyé avec succès';
+              // Réinitialiser le formulaire après l'envoi
+              document.getElementById('vcardForm').reset();
             } else {
               console.error('Erreur lors de l\'envoi de l\'e-mail');
+              // Afficher un message d'erreur
+              document.getElementById('statusMessage').textContent = 'Erreur lors de l\'envoi de l\'e-mail';
             }
           })
           .catch(error => {
             console.error('Erreur lors de l\'envoi de l\'e-mail :', error);
+            // Afficher un message d'erreur
+            document.getElementById('statusMessage').textContent = 'Erreur lors de l\'envoi de l\'e-mail';
           });
       });
     </script>
+    
 </body>
 </html>
