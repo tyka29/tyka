@@ -77,3 +77,35 @@ document.getElementById("clearForm").addEventListener("click", () => {
   const QR = document.getElementById("qr");
   QR.innerHTML = "";
 });
+
+// Importer la bibliothèque QRCode
+const QRCode = require('qrcode');
+
+function sendEmail() {
+  // Capturer les données du formulaire
+  var firstName = document.getElementById("firstName").value;
+  var lastName = document.getElementById("lastName").value;
+  // ...
+
+  // Générer l'URL "mailto"
+  var mailtoUrl = "mailto:" + email +
+    "?subject=Carte%20de%20visite" +
+    "&body=Bonjour%20,%0D%0A%0D%0AVoici%20mes%20coordonn%C3%A9es%20professionnelles%3A%0D%0A%0D%0A" +
+    "Pr%C3%A9nom%3A%20" + encodeURIComponent(firstName) + "%0D%0A" +
+    "Nom%3A%20" + encodeURIComponent(lastName) + "%0D%0A" +
+    // ...
+
+  // Générer le QR code
+  QRCode.toDataURL(mailtoUrl, function (err, qrImageUrl) {
+    if (err) {
+      console.error(err);
+      return;
+    }
+
+    // Ajouter l'URL de l'image au corps du message
+    mailtoUrl += "%0D%0A%0D%0AQR%20Code%3A%0D%0A" + encodeURIComponent(qrImageUrl);
+
+    // Ouvrir l'URL "mailto" dans une nouvelle fenêtre
+    window.open(mailtoUrl);
+  });
+}
