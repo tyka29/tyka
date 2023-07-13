@@ -39,7 +39,7 @@
       
 
         <div class="qrcode-container">
-          <h1 class="title">La carte de visite sans contact</h1>
+          <h2 class="title">La carte de visite sans contact</h2>
         <p>La carte NFC offre une expérience utilisateur unique en permettant aux personnes de scanner simplement la carte avec leur smartphone compatible NFC. Une fois scannée, la carte NFC peut transférer instantanément mes coordonnées professionnelles.</p>
         <p>Cela facilite l'établissement de nouveaux contacts professionnels et garantit que vous disposez toujours de mes coordonnées à portée de main.</p>
             <div class="content">
@@ -102,7 +102,8 @@
                 </div>
                 <button type="submit" class="button__generate" id="generateQR">GENERATE</button>
                 <button type="button" class="button__clear" id="clearForm">CLEAR</button>
-                <button type="button" id="sendEmailButton" class="button__download">SEND</button>
+                <button type="button" id="sendEmailButton" class="button__download" onclick="sendEmail()">SEND</button>
+
 
               </form>
               <div class="qr" id="qr"></div>
@@ -111,9 +112,9 @@
         <div id="statusMessage"></div>
 
         <div class="avantage">
-          <h2 class="sans-contact">Une carte sans contact</h2>
+          <h3 class="sans-contact">Une carte sans contact</h3>
             <p>Une carte de visite NFC intègre une puce NFC qui permet aux utilisateurs de partager instantanément leurs coordonnées et leurs informations professionnelles en un simple contact avec un smartphone compatible NFC</p>
-            <h2 class="sans-application">Simplifiez vos échanges professionnels et impressionnez vos contacts</h2>
+            <h3 class="sans-application">Simplifiez vos échanges professionnels et impressionnez vos contacts</h3>
             <p>Cette technologie sans fil permet d'établir une connexion rapide et sécurisée entre la carte de visite et le smartphone, éliminant ainsi le besoin de saisir manuellement les informations de contact. Il suffit de rapprocher le téléphone de la carte de visite pour que les données soient transférées automatiquement.</p>
             <p>Avec une carte de visite NFC, vous restez à la pointe de la technologie et vous vous démarquez de vos concurrents. Vous montrez votre engagement envers l'innovation et vous facilitez les échanges professionnels pour vous et vos contacts.</p>
             <p>Contactez-nous dès aujourd'hui pour obtenir votre carte de visite NFC personnalisée et impressionnez vos contacts avec cette solution pratique et moderne. Simplifiez votre réseau professionnel avec une carte de visite qui fait la différence.</p>
@@ -163,39 +164,39 @@
     <script src="js/boutique.js" defer></script>
     <script src="js/qrcode.js" defer></script>
     <script src="js/qrcode-styling.js"></script>
-
     <script>
-      // Récupérer le bouton d'envoi d'e-mail et ajouter un gestionnaire d'événement de clic
-      const sendEmailButton = document.getElementById('sendEmailButton');
-      sendEmailButton.addEventListener('click', () => {
-        // Récupérer les données du formulaire
-        const formData = new FormData(document.getElementById('vcardForm'));
+      function sendEmail() {
+        // Capturer les données du formulaire
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        // ...
     
-        // Effectuer une requête POST au serveur pour envoyer l'e-mail
-        fetch('/envoyer-email', {
-          method: 'POST',
-          body: formData
-        })
-          .then(response => {
-            if (response.ok) {
-              console.log('E-mail envoyé avec succès');
-              // Afficher un message de succès
-              document.getElementById('statusMessage').textContent = 'E-mail envoyé avec succès';
-              // Réinitialiser le formulaire après l'envoi
-              document.getElementById('vcardForm').reset();
-            } else {
-              console.error('Erreur lors de l\'envoi de l\'e-mail');
-              // Afficher un message d'erreur
-              document.getElementById('statusMessage').textContent = 'Erreur lors de l\'envoi de l\'e-mail';
-            }
-          })
-          .catch(error => {
-            console.error('Erreur lors de l\'envoi de l\'e-mail :', error);
-            // Afficher un message d'erreur
-            document.getElementById('statusMessage').textContent = 'Erreur lors de l\'envoi de l\'e-mail';
-          });
-      });
+        // Générer l'URL "mailto"
+        var mailtoUrl = "mailto:" + email +
+          "?subject=Carte%20de%20visite" +
+          "&body=Bonjour%20,%0D%0A%0D%0AVoici%20mes%20coord%20onn%C3%A9es%20professionnelles%3A%0D%0A%0D%0A" +
+          "Pr%C3%A9nom%3A%20" + firstName + "%0D%0A" +
+          "Nom%3A%20" + lastName + "%0D%0A" +
+          // ...
+    
+        // Générer le QR code
+        var qrcode = new QRCode(document.getElementById("qr"), {
+          text: mailtoUrl,
+          width: 128,
+          height: 128
+        });
+    
+        // Obtenir l'URL de l'image du QR code
+        var qrImageUrl = document.getElementById("qr").querySelector("img").src;
+    
+        // Ajouter l'URL de l'image au corps du message
+        mailtoUrl += "%0D%0A%0D%0AQR%20Code%3A%0D%0A" + qrImageUrl;
+    
+        // Ouvrir l'URL "mailto" dans une nouvelle fenêtre
+        window.open(mailtoUrl);
+      }
     </script>
+    
     
 </body>
 </html>
