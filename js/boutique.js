@@ -22,5 +22,3 @@ fetch('vcard.json')
   .catch(error => {
     console.error('Erreur lors du chargement des données vcard.json :', error);
   });
-
-  const sendEmail = require('../back/sendEmail');

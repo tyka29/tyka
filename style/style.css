@@ -424,7 +424,7 @@ footer .social {
 
 @media screen and (max-width: 1024px) {
   .container {
-    max-width: 960px;
+    max-width: 95%;
     display: flex;
     flex-direction: column;
   }
@@ -526,45 +526,43 @@ footer .social {
     margin-bottom: 2rem;
     margin: 0 auto;
   }
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .footer ul li a {
+    font-size: 16px;
+  }
+  .footer .text-center {
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+  }
   .logo {
     margin: 0 auto
   }
   .menu {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
-    margin: 0 auto;
-  }
-
-  .menu-toggle.active span {
-    background-color: #ff0000;
-  }
-
-  .menu-toggle span {
-    background-color: #333;
-  }
-
-  nav {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .menu-toggle,
-  .menu {
+    margin: 0 auto;
     width: 100%;
-  }
-
-  .menu-toggle {
-    margin-top: 10px;
-  }
-
-  .menu.active {
-    display: block;
   }
 
   .menu li {
@@ -574,9 +572,10 @@ footer .social {
     border-radius: 1rem;
     text-align: center;
     font-weight: bold;
+    width: 100%;
   }
   .menu li a {
-    color: black;
+    color: white;
   }
 
   #form {
@@ -593,7 +592,7 @@ footer .social {
   #input-search {
     border: 1px solid #d2d2d2;
     font-size: 17px;
-    width: 25%;
+    width: 50%;
     font-weight: bold;
     padding: 7px 0 8px 10px;
     margin-left: 0px;
@@ -609,7 +608,7 @@ footer .social {
     color: white;
     font-weight: bold;
     font-size: 21px;
-    padding: 6px 17px 10px 22px;
+    padding: 6px 17px 11px 22px;
     cursor: pointer;
     margin-left: -5px;
   }
@@ -681,36 +680,9 @@ footer .social {
     padding: 0.4rem 0.8rem;
     font-size: 12px;
   }
-  /* Footer */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.footer ul {
-  list-style: none;
-  margin-bottom: 10px;
-}
-
-.footer ul li {
-  margin-right: 20px;
-}
-
-.footer ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer .text-center {
-  font-size: 14px;
-}
-
-footer .links, .social {
-  margin: 0 auto;
-}
+  
+  .footer ul li a {
+    font-size: 13px;
+  }
 
 }

@@ -15,7 +15,7 @@
   width: 322px;
   height: 200px;
   z-index: 1;
-  animation: slide 10s infinite;
+  animation: rotate 10s infinite;
 }
 
 .buisness-cards img {
@@ -51,7 +51,7 @@
   display: none;
 }
 
-@keyframes slide {
+@keyframes rotate {
   0% {
     transform: translate(-50%, -50%);
   }
