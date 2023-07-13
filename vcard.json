@@ -1,12 +1,7 @@
-[
-    {
-        "id": 1,
-        "image": "img/cdv_isaac2.png"
-    },
-    
-    {
-        "id": 2,
-        "image": "img/cdv3.png"
-    }
-
-]
+{
+    "images": [
+      "img/carte.png",
+      "img/carte2.png"
+    ]
+  }
+  

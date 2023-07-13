@@ -1,24 +1,21 @@
-// Sélectionner le conteneur des cartes
-const cardsContainer = document.getElementById('vcard');
+$(document).ready(function() {
+  $.getJSON("vcard.json", function(data) {
+    var images = data.images;
 
-// Charger les données depuis le fichier JSON
-fetch('vcard.json')
-  .then(response => response.json())
-  .then(data => {
-    // Générer les cartes à partir des données
-    data.forEach(card => {
-      const cardElement = document.createElement('div');
-      cardElement.classList.add('card-title');
-
-      const image = document.createElement('img');
-      image.src = card.image;
-      image.alt = card.alt;
-
-      cardElement.appendChild(image);
-
-      cardsContainer.appendChild(cardElement);
+    var carousel = $(".carousel");
+    images.forEach(function(image) {
+      var slide = $("<div>").addClass("carousel-slide");
+      var img = $("<img>").attr("src", image).appendTo(slide);
+      slide.appendTo(carousel);
     });
-  })
-  .catch(error => {
-    console.error('Erreur lors du chargement des données vcard.json :', error);
+
+    carousel.slick({
+      dots: false,
+      arrows: false,
+      slidesToShow: images.length, 
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 1000
+    });
   });
+});

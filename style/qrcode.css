@@ -1,12 +1,13 @@
 .qrcode-container {
-  max-width: 600px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 20px;
 }
 
-.title {
+.title, p  {
   text-align: center;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .content {
@@ -16,8 +17,8 @@
   box-shadow: 0 2px 8px ;
   display: flex;
   align-items: center;
-  gap: 5rem;
-  width: 100%;
+  width: 50%;
+  display: flex;
 }
 
 .form-group {
