@@ -1,6 +1,5 @@
 h1, h2, h3 {
   text-transform: uppercase;
-  text-decoration: underline;
   font-size: 22px;
   color: #007bff;
   margin-block: 1rem;
@@ -10,6 +9,11 @@ p {
   font-size: 14px;
   color: white;
   margin-bottom: 1rem;
+}
+#vcardForm span {
+  font-size: 12px;
+  color: black;
+  text-transform: none;
 }
 .avantage .carousel {
   margin-top: 20px;
