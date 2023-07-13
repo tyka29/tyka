@@ -1,37 +1,25 @@
 .avantage .carousel {
+  margin-top: 20px;
+}
+
+.avantage .carousel .owl-item {
   display: flex;
-  overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 .avantage .carousel img {
-  flex: 0 0 auto;
-  width: 250px;
-  margin: 0 10px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-  filter: grayscale(100);
+  max-width: 100%;
+  max-height: 250px;
+  place-items: center;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
 }
 
 .avantage .carousel img:hover {
-  filter: grayscale(0);
+  filter: grayscale(0%);
 }
 
-@keyframes carouselAnimation {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.avantage .carousel {
-  animation: carouselAnimation 10s infinite;
-  animation-timing-function: linear;
-  animation-play-state: running;
-  position: relative;
-}
-
-.avantage .carousel:hover {
-  animation-play-state: paused;
+.avantage .carousel img:hover {
+  transform: scale(1.1);
 }
