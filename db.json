@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "image": "img/booki.png",
+        "image": "img/booki.webp",
         "alt": "Image du projet Booki disponible sur ma page Git",
         "title": "Booki",
         "description": "Transformer une maquette en site web avec HTML et CSS", 
@@ -9,7 +9,7 @@
         "link": "https://github.com/mikl291/P2-Dev-Web-Booki"},
     {    
         "id": 2,
-        "image": "img/ohmyfood.png",
+        "image": "img/ohmyfood.webp",
         "alt": "Image du projet Ohmyfood disponible sur ma page Git",
         "title": "Oh My Food",
         "description": "Dynamiser une page web avec des animations CSS",
@@ -17,7 +17,7 @@
         "link": "https://github.com/mikl291/P3-Dev-Web-OhMyFood"},
     {    
         "id": 3,
-        "image": "img/panthere.png",
+        "image": "img/panthere.webp",
         "alt": "Image du projet La Panthère disponible sur ma page Git",
         "title": "La Panthère",
         "description": "Optimiser un site existant.",
@@ -25,7 +25,7 @@
         "link": "https://github.com/mikl291/P4-Dev-Web-LaPanthere"},
     {
         "id": 4,
-        "image": "img/kanap.png",
+        "image": "img/kanap.webp",
         "alt": "Image du projet Kanap disponible sur ma page Git",
         "title": "Kanap",
         "description": "Construire un site e-commerce en JAVASCRIPT "  ,
@@ -33,7 +33,7 @@
         "link": "https://github.com/mikl291/P5-Dev-Web-Kanap"},
     {    
         "id": 5,
-        "image": "img/piiquante.png",
+        "image": "img/piiquante.webp",
         "alt": "Image du projet Piiquante disponible sur ma page Git",
         "title": "Piiquante",
         "description": "Construire une API sécurisée pour une application d'avis." ,
@@ -42,20 +42,12 @@
         
     {    
         "id": 6,
-        "image": "img/kasa.png",
+        "image": "img/kasa.webp",
         "alt": "Image du projet Kasa disponible sur ma page Git",
         "title": "Kasa",
         "description": "Créer une application web de location avec REACT.",
         "competences": "Configurer la navigation entre les pages de l'application avec React Router, Développer des éléments de l'interface d'un site web grâce à des composants React, Initialiser une application avec Create React App",
-        "link": "https://github.com/mikl291/P7-DEV-WEB-KASA"},
-    {    
-        "id": 7,
-        "image": "img/cdv.webp",
-        "alt": "Image du projet TY'Card disponible sur ma page Git",
-        "title": "TY'Card",
-        "description": "Création de visuel de communication." ,
-        "competences": "Création de Supports de communications (carte de visite flyers...)",
-        "link": "tycard.html"}
+        "link": "https://github.com/mikl291/P7-DEV-WEB-KASA"}
     
     
 ]
